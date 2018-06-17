@@ -20,7 +20,7 @@ router.get('/test', (req, res) => res.json({
     msg: 'Users works'
 }));
 
-//@route        GET api/users/register
+//@route        POST api/users/register
 //@desc         Register a user
 //@acess        public route
 router.post('/register', (req, res) => {
@@ -67,7 +67,7 @@ router.post('/register', (req, res) => {
         })
 });
 
-//@route        GET api/users/login
+//@route        POST api/users/login
 //@desc         Login user / Returning jwt token
 //@acess        public route
 router.post('/login', (req, res) => {
