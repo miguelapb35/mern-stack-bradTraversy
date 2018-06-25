@@ -280,7 +280,10 @@ router.delete('/experience/:exp_id', passport.authenticate("jwt", {
             profile.experience.splice(removeIndex, 1);
 
             //Save
-            profile.save().then(profile => res.json(profile)).catch(err => res.status(404).json(err));
+            profile
+                .save()
+                .then(profile => res.json(profile))
+                .catch(err => res.status(404).json(err));
         })
 })
 
